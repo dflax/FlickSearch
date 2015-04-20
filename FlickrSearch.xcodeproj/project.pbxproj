@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		FE2FCDAE1AE5816C00C89A42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCDAD1AE5816C00C89A42 /* AppDelegate.swift */; };
-		FE2FCDB01AE5816C00C89A42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FCDAF1AE5816C00C89A42 /* ViewController.swift */; };
 		FE2FCDB31AE5816C00C89A42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCDB11AE5816C00C89A42 /* Main.storyboard */; };
 		FE2FCDB51AE5816C00C89A42 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCDB41AE5816C00C89A42 /* Images.xcassets */; };
 		FE2FCDB81AE5816C00C89A42 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE2FCDB61AE5816C00C89A42 /* LaunchScreen.xib */; };
@@ -29,7 +28,6 @@
 		FE2FCDA81AE5816C00C89A42 /* FlickrSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickrSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2FCDAC1AE5816C00C89A42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE2FCDAD1AE5816C00C89A42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FE2FCDAF1AE5816C00C89A42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FE2FCDB21AE5816C00C89A42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE2FCDB41AE5816C00C89A42 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FE2FCDB71AE5816C00C89A42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				FE2FCDAD1AE5816C00C89A42 /* AppDelegate.swift */,
-				FE2FCDAF1AE5816C00C89A42 /* ViewController.swift */,
 				FE2FCDB11AE5816C00C89A42 /* Main.storyboard */,
 				FE2FCDB41AE5816C00C89A42 /* Images.xcassets */,
 				FE2FCDB61AE5816C00C89A42 /* LaunchScreen.xib */,
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE2FCDB01AE5816C00C89A42 /* ViewController.swift in Sources */,
 				FE2FCDAE1AE5816C00C89A42 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,6 +403,7 @@
 				FE2FCDC91AE5816C00C89A42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE2FCDCA1AE5816C00C89A42 /* Build configuration list for PBXNativeTarget "FlickrSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +412,7 @@
 				FE2FCDCC1AE5816C00C89A42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
