@@ -9,7 +9,10 @@
 import Foundation
 import UIKit
 
-let apiKey = "8df0d1927b08a8ac80cf7115d69b4072"
+let apiKey = "e81306643b01d75c37c5e14f3d0ca1ab"
+
+// URL: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e81306643b01d75c37c5e14f3d0ca1ab&text=hello&format=rest&api_sig=627c1279d07ee6a50552bfebd2882fd6
+
 
 struct FlickrSearchResults {
   let searchTerm : String
@@ -147,7 +150,9 @@ class Flickr {
     
     let escapedTerm = searchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
     let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
-    return NSURL(string: URLString)!
+
+	println("Flickr URLstring: \(URLString)")
+	return NSURL(string: URLString)!
   }
   
   
