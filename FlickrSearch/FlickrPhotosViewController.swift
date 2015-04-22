@@ -11,7 +11,7 @@ import UIKit
 class FlickrPhotosViewController: UICollectionViewController {
 
 	private let reuseIdentifier = "FlickrCell"
-	private let sectionInsets = UIEdgeInsets(top: 50.0, left: 20.0, bottom: 50.0, right: 20.0)
+	private let sectionInsets = UIEdgeInsets(top: 25.0, left: 10.0, bottom: 25.0, right: 10.0)
 
 	// Data structures
 	private var searches = [FlickrSearchResults]()
@@ -72,10 +72,17 @@ extension FlickrPhotosViewController : UICollectionViewDataSource {
 		return searches[section].searchResults.count
 	}
 
-	//3
 	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! UICollectionViewCell
+
+		//1
+		let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! FlickrPhotoCell
+
+		//2
+		let flickrPhoto = photoForIndexPath(indexPath)
 		cell.backgroundColor = UIColor.blackColor()
+
+		//3
+		cell.imageView.image = flickrPhoto.thumbnail
 
 		return cell
 	}
@@ -92,7 +99,7 @@ extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
 
 			//2
 			if var size = flickrPhoto.thumbnail?.size {
-				size.width += 10
+				size.width  += 10
 				size.height += 10
 				return size
 			}
