@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-let apiKey = "e81306643b01d75c37c5e14f3d0ca1ab"
-
-// URL: https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=e81306643b01d75c37c5e14f3d0ca1ab&text=hello&format=rest&api_sig=627c1279d07ee6a50552bfebd2882fd6
+// App Key from Flickr for user dflax
+// Key:    9d855335ca6d46821673edf2710ab9a1
+// Secret: 513756f676e4b70c
+let apiKey = "9d855335ca6d46821673edf2710ab9a1"
 
 
 struct FlickrSearchResults {
