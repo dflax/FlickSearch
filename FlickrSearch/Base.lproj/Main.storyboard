@@ -30,6 +30,9 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qen-Hk-CLA">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="7Fb-6M-FEd">
+                                            <rect key="frame" x="90" y="90" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
@@ -40,6 +43,7 @@
                                     <constraint firstAttribute="trailingMargin" secondItem="qen-Hk-CLA" secondAttribute="trailing" constant="5" id="bWf-es-UaP"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="7Fb-6M-FEd" id="a8b-Q0-ZIx"/>
                                     <outlet property="imageView" destination="qen-Hk-CLA" id="zqD-dX-fhT"/>
                                 </connections>
                             </collectionViewCell>
