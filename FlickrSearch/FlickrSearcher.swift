@@ -90,6 +90,16 @@ class Flickr {
 
 	let processingQueue = NSOperationQueue()
 
+	var thumbnailSize : String {
+println("Device: \(UIDevice.currentDevice().model)")
+
+		if (UIDevice.currentDevice().model.lowercaseString.rangeOfString("iphone") != nil) {
+			return "t"
+		} else {
+			return "m"
+		}
+	}
+
 	func searchFlickrForTerm(searchTerm: String, completion : (results: FlickrSearchResults?, error : NSError?) -> Void) {
 
 		let searchURL = flickrSearchURLForSearchTerm(searchTerm)
@@ -135,7 +145,7 @@ class Flickr {
 
 				let flickrPhoto = FlickrPhoto(photoID: photoID, farm: farm, server: server, secret: secret)
 
-				let imageData = NSData(contentsOfURL: flickrPhoto.flickrImageURL())
+				let imageData = NSData(contentsOfURL: flickrPhoto.flickrImageURL(size: self.thumbnailSize))
 				flickrPhoto.thumbnail = UIImage(data: imageData!)
 
 				return flickrPhoto
@@ -152,7 +162,7 @@ class Flickr {
 		let escapedTerm = searchTerm.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
 		let URLString = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=\(apiKey)&text=\(escapedTerm)&per_page=20&format=json&nojsoncallback=1"
 
-//		println("Flickr URLstring: \(URLString)")
+		println("Flickr URLstring: \(URLString)")
 
 		return NSURL(string: URLString)!
 	}
