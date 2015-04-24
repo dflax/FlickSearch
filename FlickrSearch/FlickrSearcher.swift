@@ -35,7 +35,7 @@ class FlickrPhoto : Equatable {
 	}
 
 	func flickrImageURL(size:String = "m") -> NSURL {
-println("flickrImageURL: http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")
+//println("flickrImageURL: http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")
 		return NSURL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoID)_\(secret)_\(size).jpg")!
 	}
 
@@ -91,7 +91,7 @@ class Flickr {
 	let processingQueue = NSOperationQueue()
 
 	var thumbnailSize : String {
-println("Device: \(UIDevice.currentDevice().model)")
+//println("Device: \(UIDevice.currentDevice().model)")
 
 		if (UIDevice.currentDevice().model.lowercaseString.rangeOfString("iphone") != nil) {
 			return "t"

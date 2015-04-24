@@ -161,6 +161,14 @@ extension FlickrPhotosViewController : UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegateFlowLayout flow layout
 extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
 
+	var cellPaddingSize : CGFloat {
+		if (UIDevice.currentDevice().model.lowercaseString.rangeOfString("iphone") != nil) {
+			return 5.0
+		} else {
+			return 10.0
+		}
+	}
+
 	func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
 
 		let flickrPhoto = photoForIndexPath(indexPath)
@@ -168,16 +176,20 @@ extension FlickrPhotosViewController : UICollectionViewDelegateFlowLayout {
 		// New code
 		if indexPath == largePhotoIndexPath {
 			var size = collectionView.bounds.size
+
 			size.height -= topLayoutGuide.length
 			size.height -= (sectionInsets.top + sectionInsets.right)
-			size.width -= (sectionInsets.left + sectionInsets.right)
+			size.width  -= (sectionInsets.left + sectionInsets.right)
+
 			return flickrPhoto.sizeToFillWidthOfSize(size)
 		}
 
 		// Previous code
 		if var size = flickrPhoto.thumbnail?.size {
-			size.width += 10
-			size.height += 10
+//			size.width += cellPaddingSize
+//			size.height += cellPaddingSize
+
+//			size = CGSize(width: 100.0, height: 50.0)
 			return size
 		}
 		return CGSize(width: 100, height: 100)
